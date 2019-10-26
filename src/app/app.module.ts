@@ -41,6 +41,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SidebarModule } from 'ng-sidebar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,17 +51,22 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     A11yModule,
     CdkStepperModule,
@@ -102,6 +110,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+    FormsModule,
+    SidebarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

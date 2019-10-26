@@ -1,0 +1,40 @@
+<div class="dash-body">
+    <ng-sidebar-container (onBackdropClicked)="_onBackdropClicked()">
+        <ng-sidebar [(opened)]="_opened" [mode]="'push'" [position]="'left'" [dock]="true" [dockedSize]="'90px'" [closeOnClickOutside]="true" [ariaLabel]="'My sidebar'">
+            <div class="nav-content">
+                <div class="menu-item">
+                    <h4 [ngClass]="_opened === false ? 'text-right' : 'none'"><strong><img src="../../assets/user.png"> <strong *ngIf="_opened"> {{ global.user.firstName }} {{ global.user.lastName }}</strong></strong></h4>
+                </div>
+                <hr>
+                <div class="menu-item">
+                        <h4 [ngClass]="_opened === false ? 'text-right' : 'none'"><strong><img src="../../assets/layout.png"> <strong *ngIf="_opened"> Dashboard</strong></strong></h4>
+                </div>               
+                <hr>
+                <div class="menu-item">
+                    <h4 [ngClass]="_opened === false ? 'text-right' : 'none'"><strong><img src="../../assets/creativity.png"> <strong *ngIf="_opened"> Exercitii</strong></strong></h4>
+                </div>
+                <hr>
+                <div class="menu-item">
+                    <h4 [ngClass]="_opened === false ? 'text-right' : 'none'"><strong><img src="../../assets/logic.png"> <strong *ngIf="_opened"> Scheme logice</strong></strong></h4>
+                </div>
+                <hr>
+                <div class="menu-item">
+                    <h4 [ngClass]="_opened === false ? 'text-right' : 'none'"><strong><img src="../../assets/conversation.png"> <strong *ngIf="_opened"> Despre</strong></strong></h4>
+                </div>
+                <hr>
+            </div>
+        
+        </ng-sidebar>
+
+        <div class="content" ng-sidebar-content>
+            <header class="demo-header">
+                <i (click)="_toggleOpened()" class="fa fa-bars"></i>
+            </header>
+
+            <div class="demo-contents">
+
+
+            </div>
+        </div>
+    </ng-sidebar-container>
+</div>

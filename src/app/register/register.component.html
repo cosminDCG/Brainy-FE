@@ -1,44 +1,42 @@
-<script>
-    $(function () {
-    $('#datetimepicker1').datetimepicker();
-  });
-</script>
 <div>
     <div class="col-md-10 centre">
         <div>
-            <strong>First Name</strong>
-            <input class="form-control">
+            <strong>Prenume</strong>
+            <input [(ngModel)]="firstName" class="form-control">
         </div><br>
 
         <div>
-            <strong>Last Name</strong>
-            <input class="form-control">
+            <strong>Nume</strong>
+            <input [(ngModel)]="lastName" class="form-control">
         </div><br>
 
         <div>
-            <strong>Username</strong>
-            <input class="form-control">
+            <strong>Nume de utilizator</strong>
+            <input [(ngModel)]="username" class="form-control">
         </div><br>
 
         <div>
-            <strong>Birthday</strong>
-            <input type="date" class="form-control">
+            <strong>Zi de nastere</strong>
+            <input [(ngModel)]="birthDay" type="date" class="form-control">
         </div><br>
 
         <div>
             <strong>Email</strong>
-            <input class="form-control">
+            <input [(ngModel)]="email" class="form-control">
         </div><br>
 
         <div>
-            <strong>Password</strong>
-            <input class="form-control">
+            <strong>Parola</strong>
+            <input [(ngModel)]="password" type="password" class="form-control">
         </div><br>
 
         <div>
-            <strong>Repeat Password</strong>
-            <input class="form-control">
+            <strong>Repeta parola</strong>
+            <input [(ngModel)]="repeatPassword" type="password" class="form-control">
         </div><br>
         
+        <div class="row">
+            <button (click)="register()" class="btn btn-lg btn-info">Inregistrare</button>
+        </div>
     </div>
 </div>
